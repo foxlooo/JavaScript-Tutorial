@@ -1,0 +1,79 @@
+<script type="text/javascript">
+	// Just add Quotes similar to other languages
+	var firstName = "Alan";
+	var lastName = "Turing";
+
+	// Use Escape Key to add quotes in string
+	var quotesInQuotes = "Hello my name is \"Junwen\"";
+	// You can use single quotes or double quotes to signify a string
+	var test = 'Hello my name is "Junwen"';
+	var test1 = "Hello my name is 'Junwen'";
+	// You can add backticks around to signify that quotes can all be used
+	var test2 = `Hello my name is "Junwen" 'Jiang'`;
+	var test3 = `Hello`;
+	console.log(test);
+	console.log(test1);
+	console.log(test2);
+	console.log(test3);
+
+	/*******
+	Escape Characters:
+	CODE	OUTPUT
+	\'		single quote
+	\"		double quote
+	\\		backslash
+	\n 		newline
+	\r 		carriage return
+	\t 		tab
+	\b 		backspace
+	\f 		form feed
+	********/
+
+	// Concatenating Strings
+	var ourStr = "I come first " + "then me!";
+	ourStr += " Adding this line!";
+
+	// Combining Strings with Variables
+	var greeting = "Hey, my name is " + firstName + "!";
+	console.log(greeting);
+
+
+	// *********************************** Functions of Strings *****************************************
+
+	// Get Length of String
+	firstName = "Alan ";
+	lengthOfAlan = firstName.length;
+	console.log(lengthOfAlan);
+
+	// Get Characters in String
+	var letters = "abcde"
+	var firstLetter = letters[0]
+	var secondLetter = letters[1]
+	var lastLetter = letters[letters.length - 1]
+	console.log(firstLetter)
+	console.log(secondLetter)
+	console.log(lastLetter)
+
+	// Change character in String
+	var great = "Hreat"
+	great[0] = "G" // Does not change to "Great" as strings are immutable
+	console.log(great)
+	great = "Great"
+	console.log(great)
+
+	// Using strings in Functions
+	function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+		var result = "";
+
+		result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
+		return result;
+	}
+
+	var noun = "dog";
+	var adjective = "big";
+	var verb = "ran";
+	var adverb = "quickly";
+
+	console.log(wordBlanks(noun, adjective, verb, adverb))
+
+</script>

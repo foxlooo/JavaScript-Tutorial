@@ -1,3 +1,31 @@
 <script type="text/javascript">
+	var myArray = ["Foxlooo", 1]
 	
+	// Nested Array
+	var nestedArray = [["Universe", 2], ["Everything", 1011]]
+
+	var nestedFirstOfFirstval = nestedArray[0][0]
+	console.log(nestedFirstOfFirstval)
+
+	// Change Values in array
+	myArray[0] = "Test"
+	console.log(myArray)
+
+	// Add Elements to the end of an Array
+	myArray.push("I'm Happy!")
+	console.log(myArray) // ["Test", 1, "I'm Happy!"]
+
+	// Pop Elements from array
+	var sentence = myArray.pop()
+	console.log(sentence) // prints out "I'm Happy"
+	console.log(myArray) // ["Test", 1]
+
+	// Pops from front of array
+	var sentenceFront = myArray.shift()
+	console.log(sentence) // prints out "Test"
+	console.log(myArray) // [1]
+
+	// Add element to the front of an array
+	myArray.unshift("Foxlooo")
+	console.log(myArray) // ["Foxlooo", 1]
 </script>

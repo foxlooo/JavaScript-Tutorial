@@ -32,4 +32,155 @@
 	fun1();
 	fun2();
 
+	// Local Scope and Functions
+
+	function myLocalScope() {
+		var myVar = 5;
+		console.log(myVar);
+	}
+	myLocalScope();
+
+	// console.log(myVar);  // Will Error out
+
+	// Priority in Global Vs Local Variable
+
+	var outerWear = "T-Shirt";
+	function myOutfit() {
+		var outerWear = "Sweater"
+
+		return outerWear
+	}
+	console.log(myOutfit()) // Will Output Sweater
+	console.log(outerWear) // Will Output T-Shirt
+
+	// No Return Value is undefined
+
+	var sum = 0
+	function addFive() {
+		sum += 5
+	}
+	console.log(addFive()) // outputs undefined
+	console.log(sum) // Sum does increase here to 5
+
+	// Playing with Array Functions
+	function NextInLine(arr, item) {
+		arr.push(item);
+		return arr.shift();
+	}
+
+	var testArr = [1,2,3,4,5]
+
+	console.log("Before: " + JSON.stringify(testArr))
+	console.log(NextInLine(testArr, 6))
+	console.log("After: " + JSON.stringify(testArr))
+
+	// Boolean Conditions
+	function trueOrFalse(wasThisTrue){
+		if (wasThisTrue) {
+			return "Yes, that was true";
+		}
+		return "No it wasn't"
+	}
+
+	console.log(trueOrFalse(true))
+
+	// Equality Operator
+	function equalToFive(num){
+		if (num == 5){
+			return true
+		}
+		return false
+	}
+	console.log(equalToFive(5)) // returns True
+	console.log(equalToFive(4)) // returns False
+	console.log(equalToFive("5")) // returns True
+
+	function strictEquality(num){
+		if (num === 5){
+			return true
+		}
+		return false
+	}
+
+	console.log(equalToFive("5")) // returns False
+
+	// Inequality
+	function notequalToFive(num){
+		if (num != 5){
+			return true
+		}
+		return false
+	}
+	console.log(equalToFive(5)) // returns False
+	console.log(equalToFive(4)) // returns True
+	console.log(equalToFive("5")) // returns False
+
+	function notstrictEquality(num){
+		if (num !== 5){
+			return true
+		}
+		return false
+	}
+
+	console.log(equalToFive("5")) // returns True
+
+	// And Operator
+	function betweenOneAndTen(num){
+		if (num >= 1 && num <= 10){
+			return true
+		}
+		return false
+	}
+	
+	// Or Operator
+	function orLogicalOperator(val){
+		if (val < 10 || val > 20){
+			return true
+		}
+		return false
+	}
+
+	// If and Else If and Else statements
+	function ifElse(val){
+		if (val < 10) {
+			return "small"
+		}
+		else if (val < 20) {
+			return "medium"
+		}
+		else{
+			return "huge"
+		}
+	}
+
+	// Switch Statements
+	function switchMe(val){
+		var answer = ""
+		switch(val) {
+			case 1:
+				answer = "one";
+				break;
+			case 2:
+				answer = "two";
+				break;
+			case 'a':
+				answer = "alphabet";
+				break;
+			default:
+				answer = "none of the above";
+				break;
+		}
+		return answer
+	}
+
+	// Any of 1, 2, or 3 will return "High"
+	function multiSwitch(val){
+		switch(val){
+			case 1:
+			case 2:
+			case 3:
+				return "High"
+		}
+	}
+
 </script>

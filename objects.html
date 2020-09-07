@@ -8,6 +8,8 @@
 		"friends": ["Everything!"]
 	};
 
+	// Note that if the property has a space, you must use array notation
+
 	// Accessing Property values
 	var dogName = ourDog.name;
 	string = 'name';
@@ -20,5 +22,13 @@
 
 	// Deleting Property from Object
 	delete ourDog.tails; 
+
+	// Check for property
+	function checkDogName(checkProp){
+		if (ourDog.hasOwnProperty(checkProp)){
+			return ourDog[checkProp];
+		}
+		return "Not Found"
+	}
 
 </script>
